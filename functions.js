@@ -80,12 +80,12 @@ document.getElementById("btnEnviar").addEventListener("click", function(event) {
        alert("Por favor completa todos los campos del formulario.");
        return;
    }
-   var mensajeWhatsApp;
+   let mensajeWhatsApp;
    if (confirmacion === "Sí asistiré") {
-       mensajeWhatsApp = "Hola soy " + nombre + ", muchas gracias por la invitación y quiero notificarles que acepto con mucho gusto!";
+       mensajeWhatsApp = "Hola soy " + nombre + ", muchas gracias por la invitación y quiero notificarles que acepto con mucho gusto!" + "Mi teléfono es: " + telefono + "Dedicatoria: " + mensaje;
    } else if (confirmacion === "No asistiré") {
-       mensajeWhatsApp = "Hola soy " + nombre + ", muchas gracias por la invitación pero lamentablemente no podré asistir! Muchas gracias!";
+       mensajeWhatsApp = "Hola soy " + nombre + ", muchas gracias por la invitación pero lamentablemente no podré asistir! Muchas gracias! " + " Mi teléfono es: " + telefono + ". Dedicatoria: " + mensaje;
    }
-   var enlaceWhatsApp = "https://api.whatsapp.com/send?phone=+523310873052&text=" + encodeURIComponent(mensajeWhatsApp);
+   let enlaceWhatsApp = "https://api.whatsapp.com/send?phone=+523310873052&text=" + encodeURIComponent(mensajeWhatsApp);
    window.open(enlaceWhatsApp);
 });
