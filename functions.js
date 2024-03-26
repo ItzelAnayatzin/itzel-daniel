@@ -87,5 +87,5 @@ document.getElementById("btnEnviar").addEventListener("click", function(event) {
        mensajeWhatsApp = "Hola soy " + nombre + ", muchas gracias por la invitación pero lamentablemente no podré asistir! Muchas gracias! " + "Mi teléfono es: " + telefono + " Dedicatoria: " + mensaje;
    }
    let enlaceWhatsApp = "https://api.whatsapp.com/send?phone=+523310873052&text=" + encodeURIComponent(mensajeWhatsApp);
-   window.open(enlaceWhatsApp);
+   window.open(enlaceWhatsApp).focus;
 });

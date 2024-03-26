@@ -46,12 +46,13 @@ body{
 
 .container1 p{
     font-family: FontSkeina;
+    text-transform:uppercase;
     color: #8C0048;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .container1 img{
-    width: 500px;
+    width: 450px;
 }
 
 /*Contenedor 2: familias*/
@@ -59,14 +60,14 @@ body{
     font-family: FontSkeina;
     text-transform:uppercase;
     color:#CCAF7D;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
 }
 
 .names{
     font-family: FontSkeina;
     color:#CCAF7D;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -86,12 +87,12 @@ body{
 
 .date h3{
     font-family: FontWhiteAngelica;
-    font-size: 35px;
+    font-size: 32px;
 }
 
 .date p{
     font-family: FontSkeina;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 /*Estilos para la cuenta regresiva*/
@@ -130,6 +131,7 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
     margin-top: 30px;
 }
 
@@ -161,7 +163,7 @@ body{
 }
 
 .experienceList {
-    border-left: 1px solid white;
+    border-left: 1px solid #CCAF7D;
     position: relative;
     list-style:none;
 }
@@ -174,7 +176,7 @@ body{
 .decorativeCircleList {
     height: 20px;
     width: 20px;
-    background-color: white;
+    background-color: #CCAF7D;
     border-radius: 80%;
     position: absolute;
     left: -10px;
@@ -257,6 +259,7 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
     margin-top: 30px;
 }
 
@@ -327,7 +330,7 @@ form{
     transition: all .3s;
     border:2px solid #8C0048;
     color: #CCAF7D;
-    font-size: 20px;
+    font-size: 15px;
     margin-top: 10px;
 }
 
@@ -406,7 +409,7 @@ form{
     }
 
     .container1 img{
-        width: 1200px;
+        width: 1000px;
     }
 
     .date h3{
@@ -427,7 +430,7 @@ form{
     }
 
     .titleSection img{
-        width: 400px;
+        width: 500px;
     }
 
     .experienceItemList {
@@ -458,6 +461,10 @@ form{
 
     form{
         width: 700px;
+    }
+
+    .confirmationForm input, .confirmationForm select, .confirmationForm textarea{
+        font-size: 20px;
     }
 
     .footer img{
