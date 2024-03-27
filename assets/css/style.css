@@ -372,12 +372,16 @@ form{
 /*Media queries*/
 @media (min-width: 768px) {
     .container1 img{
-        width: 900px;
+        width: 800px;
     }
 
     .collage1, .carrusel2{
         flex-direction: row;
         justify-content: space-around;
+    }
+
+    .container1 p, .containerFamilias h2, .containerFamilias p, .itinerario p, .codigoVestimenta p, .confirmationForm p{
+        font-size: 22px;
     }
 
     .juntos1, .ramo, .juntos2, .juntos3, .juntos4, .juntos5{
@@ -393,8 +397,13 @@ form{
         margin: 20px;
     }
 
+    .card p{
+        font-size: 22px;
+    }
+
     form{
         width: 500px;
+        margin-bottom: 20px;
     }
 }
 
@@ -464,7 +473,7 @@ form{
     }
 
     .confirmationForm input, .confirmationForm select, .confirmationForm textarea{
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .footer img{
