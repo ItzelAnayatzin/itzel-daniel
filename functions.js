@@ -70,22 +70,36 @@ function mostrarTiempo(partes, bloque){
 
 
 //Confirmación por whats
+//confirmacion por whats corregido para ipad, aparte ya esta bien estructurada el mensaje
 document.getElementById("btnEnviar").addEventListener("click", function(event) {
    event.preventDefault(); // Evitar que el formulario se envíe
+  
    let nombre = document.getElementById("nombre").value;
    let confirmacion = document.getElementById("confirmacion").value;
-   let telefono = document.getElementById("telefono").value;
+   let telefono = document.getElementById("telefono").value.trim();
    let mensaje = document.getElementById("mensaje").value;
-   if (nombre.trim() === "" || confirmacion === "" || telefono.trim() === "") {
+  
+   if (!/^\d+$/.test(telefono)) {
+       alert("Por favor, introduce solo números en el campo de teléfono.");
+       return;
+   }
+  
+   if (nombre.trim() === "" || confirmacion === "" || telefono === "") {
        alert("Por favor completa todos los campos del formulario.");
        return;
    }
+  
    let mensajeWhatsApp;
    if (confirmacion === "Sí asistiré") {
-       mensajeWhatsApp = "Hola soy " + nombre + ", muchas gracias por la invitación y quiero notificarles que acepto con mucho gusto! " + "Mi teléfono es: " + telefono + " Dedicatoria: " + mensaje;
+       mensajeWhatsApp = "✨ Hola soy " + nombre + ", muchas gracias por la invitación y quiero notificarles que acepto con mucho gusto! 😀\n" +
+                         "Mi teléfono es: " + telefono + ".\n" +
+                         "Dedicatoria: " + mensaje;
    } else if (confirmacion === "No asistiré") {
-       mensajeWhatsApp = "Hola soy " + nombre + ", muchas gracias por la invitación pero lamentablemente no podré asistir! Muchas gracias! " + "Mi teléfono es: " + telefono + " Dedicatoria: " + mensaje;
+       mensajeWhatsApp = "✨ Hola soy " + nombre + ", muchas gracias por la invitación pero lamentablemente no podré asistir! Muchas gracias! ☹️\n" +
+                         "Mi teléfono es: " + telefono + ".\n" +
+                         "Dedicatoria: " + mensaje;
    }
+  
    let enlaceWhatsApp = "https://api.whatsapp.com/send?phone=+523310873052&text=" + encodeURIComponent(mensajeWhatsApp);
    window.open(enlaceWhatsApp).focus;
 });
