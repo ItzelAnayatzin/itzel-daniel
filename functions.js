@@ -100,6 +100,6 @@ document.getElementById("btnEnviar").addEventListener("click", function(event) {
                          "Dedicatoria: " + mensaje;
    }
   
-   let enlaceWhatsApp = "https://api.whatsapp.com/send?phone=+525654249268&text=" + encodeURIComponent(mensajeWhatsApp);
+   let enlaceWhatsApp = "https://api.whatsapp.com/send?phone=+523122117027&text=" + encodeURIComponent(mensajeWhatsApp);
    window.open(enlaceWhatsApp).focus;
 });
